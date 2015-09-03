@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script type="text/javascript" src="/javascripts/script.js"></script>
+  </head>
+  <body>
+    <h1>And the response from the server is.....</h1>
+    <p class="response"></p>
+
+    <script type="text/template" id="message-template">
+        <p>Message for you: <%%= message %>.  Oh! And do not forget the note: <%%= note %></p>
+    </script>
+
+    <script type="text/javascript" id="template_code">
+    $(document).ready(function() {
+      $.ajax({
+        url: "/api",
+        type: "GET",
+        dataType: "json",
+        success: function(data) {
+          console.log(data.message);
+          var template = $('#message-template').html();
+          var renderedTemplate = _.template(template)(data);
+          $('.response').append(renderedTemplate);
+        }
+      });
+    });
+    </script>
+    
+  </body>
+</html>
