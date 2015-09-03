@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type="text/javascript" src="./javascripts/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>This is a simple example of using Express as a JSON API.</p>
+    <p><button class="json-getter" type="button">Get JSON data</button></p>
+    
+  </body>
+
+  <script type="text/javascript">
+  $(document).on('ready', function(){
+  	$('.json-getter').on('click', function(e) {
+  		e.preventDefault();
+
+  		$.ajax({
+  			url: '/api',
+  			dataType: 'json',
+  			success: function(data) {
+  				console.log(data);
+  				$('body').append('<h2>' + data.message + '</h2><p>' + data.note + '</p>')
+  			},
+  			error: function(error) {
+  				console.log(error);
+  			}
+
+  		});
+  	});
+  });
+  </script>
+</html>
