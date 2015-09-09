@@ -1,0 +1,7 @@
+{
+	"car": "chevy",
+	"speed": 88,
+	"units": "mph",
+	"color": "grey",
+	"competitors": ["Ford", "Dodge", "Mustang", "BMW", "Plymouth"]
+}

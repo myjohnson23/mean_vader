@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <script>
+    $(document).ready(function(){
+      $("#submit").click(function(){
+          console.log('Message fetched!');
+        $.ajax({
+            type: "GET",
+            url: "/api",
+            dataType: 'json',
+            success:function(data){
+          $("#result").append("<li><strong>Message:</strong> <em>" + data.message + '</em> | ' + '<strong>Note:</strong> <em>' + data.note + '</em></li><br>');
+        }});
+      });
+    });
+    </script>
+
+<button id='submit'>Post It</button>
+<hr>
+
+
+<div id='result'>
+  <!-- post ajax result here -->
+</div>
+
+  </body>
+</html>

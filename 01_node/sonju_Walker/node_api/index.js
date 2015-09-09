@@ -1,6 +1,6 @@
   // library for http
   var http = require('http');
-  // library fo filesystem
+  // library for filesystem
   var fs = require('fs');
 
   var json = fs.readFileSync('./data.json');

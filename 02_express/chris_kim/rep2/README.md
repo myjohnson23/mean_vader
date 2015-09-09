@@ -1,0 +1,1 @@
+Create an Express RESTful API with the resource (URL) of /api. Inside of the .get(), post(),, etc commands leave Javascript comments that describe that this is not yet implemented. We will use this API with MongoDB to create CRUD operations soon. Research Express routes on your own to implement this.

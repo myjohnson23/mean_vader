@@ -1,0 +1,17 @@
+{
+  "name": "hi_express",
+  "version": "1.0.0",
+  "description": "A wiggly little express baby",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tim Rourke",
+  "license": "MIT",
+  "devDependencies": {
+    "express": "^4.13.3"
+  },
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}

@@ -1,0 +1,7 @@
+'{
+  "message": "Hey, y'all",
+  "type": "welcome",
+  "sender": "me",
+  "recipient": "you",
+  "time": "right now"
+}'

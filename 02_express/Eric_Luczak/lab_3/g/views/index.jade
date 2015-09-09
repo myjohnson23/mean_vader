@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 Done via rendering a JSON.
+  p Note: #{note}
+  p Message: #{message}
+
+  h1 appended using jQuery
+  p#main
+  script(src='/javascripts/index.js')
